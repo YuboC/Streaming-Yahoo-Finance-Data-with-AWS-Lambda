@@ -19,6 +19,7 @@ This project consists of three major infrastructure elements that work in tandem
 ## AWS SETTINGS
   
 ### DATA COLLECTOR LAMBDA
+  - Lambda Function URL: https://3l0h388o8h.execute-api.us-east-1.amazonaws.com/default/datacollector
   - Basic settings: `Timeout: 15min`, `Memory(MB): 1024`, `attach policy: AmazonKinesisFirehoseFullAccess`, `API Gateway`
     ```python
     import json
