@@ -177,3 +177,19 @@ ORDER BY name, hour
 |TTD |13  |2020-05-14 13:31:00-04:00|296        |
 |TTD |14  |2020-05-14 14:59:00-04:00|295.769989 |
 |TTD |15  |2020-05-14 15:24:00-04:00|297.6700134|
+
+
+## VISULIZATION
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+df = pd.read_csv('result.csv')
+name = ['FB', 'SHOP', 'BYND', 'NFLX', 'PINS', 'SQ', 'TTD', 'OKTA', 'SNAP', 'DDOG']
+for a in name:
+    plt.plot(df[df['name'] == a]['max_high'].values)
+```
+- Output:  
+![output](https://github.com/YuboC/Streaming-Yahoo-Finance-Data-with-AWS-Lambda/blob/master/screen%20shot/download.png)
